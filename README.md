@@ -153,7 +153,42 @@ Navigate to VPC via search and click vpc.
 
 ![](./img/Pasted%20image%20(28).png)
 
-* Now go back to your browser to check if access is now granted. Now we can access the text.
+* Now go back to your browser to check if access is now granted. Now we can access apache home page.
 
-![](./img/Pasted%20image%20(30).png)
+![](./img/Pasted%20image%20(33).png)
+
+### Scenario where a security group Allows inbound HTTP, SSH and permits all outbound traffic. NACL denies all inbound traffic. Let's observe this configuration.
+
+
+![](./img/Pasted%20image%20(31).png)
+
+![](./img/Pasted%20image%20(32).png)
+
+![](./img/Pasted%20image%20(34).png)
+
+![](./img/Pasted%20image%20(35).png)
+
+### Now remove the allow rule on NACL so it goes back to default deny all traffic.
+
+* Go to inbound NACL rule config, remove the permit rule to reset back to default explicit deny.
+
+![](./img/Pasted%20image%20(39).png)
+
+* Click edit inbound rules, remove the allow rule and save changes.
+
+![](./img/Pasted%20image%20(40).png)
+
+* NACL inbound rule should fall back to default deny.
+
+![](./img/Pasted%20image%20(41).png)
+
+* Go to NACL outbound config, remove allow rule and save changes.
+
+![](./img/Pasted%20image%20(37).png)
+
+* Outbound NACL should be back to default deny.
+
+
+![](./img/Pasted%20image%20(38).png)
+
 
