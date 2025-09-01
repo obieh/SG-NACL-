@@ -37,7 +37,7 @@
 ### Key Differences Table
 
 | Feature | Security Group (SG)| Network ACL (NACL) |
-| ------- |------------------- | ------------------ |
+| :------- |------------------- | ------------------ |
 | Scope   | Instance level (applies to ENI) | Subnet level (applies to all instances in the subnet) |
 | State   | Stateful (Return traffic is automatically allowed) | Stateless (Return traffic must be explicitly allowed by rules) |
 | Rule Types | Allow rules only (implicit deny) | Allow AND Deny rules (explicit) |
@@ -45,3 +45,32 @@
 | Default Behavior | Deny all inbound; Allow all outbound | Default NACL: Allow all inbound and outbound. Custom NACL: Deny all inbound and outbound. |
   
 
+## Create an Instance in public subnet
+
+* head over to EC2 page, add a name and select os image you want to use.
+
+![](./img/Pasted%20image%20(2).png)
+
+* Select the vpc you have created in the previous project.
+
+![](./img/Pasted%20image.png)
+
+* Add a security group to allow ssh and all ipv4
+
+![](./img/Pasted%20image%20(3).png)
+
+* The instance should come up running. Head over to instnaces running and select the instace you just created.
+
+![](./img/Pasted%20image%20(4).png)
+
+* Click security group to see the details. Inbound rules should allow ssh traffic on port 22.
+
+![](./img/Pasted%20image%20(5).png)
+
+* Outbound rules should allow all IPv4 traffic.
+
+![](./img/Pasted%20image%20(6).png)
+
+* Now copy the public IP address and headover to your browser to access the app. You will notice that the connection times out.
+
+![](./img/Pasted%20image%20(7).png)
