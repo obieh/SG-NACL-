@@ -47,7 +47,7 @@
 
 ## Create an Instance in public subnet
 
-* head over to EC2 page, add a name and select os image you want to use.
+* Head over to EC2 page, add a name and select os image you want to use.
 
 ![](./img/Pasted%20image%20(2).png)
 
@@ -59,7 +59,7 @@
 
 ![](./img/Pasted%20image%20(3).png)
 
-* The instance should come up running. Head over to instnaces running and select the instace you just created.
+* The instance should come up running. Head over to instances running and select the instace you just created. Then ssh into the EC2 instance and install apache on it.
 
 ![](./img/Pasted%20image%20(4).png)
 
@@ -190,5 +190,10 @@ Navigate to VPC via search and click vpc.
 
 
 ![](./img/Pasted%20image%20(38).png)
+
+
+* The same instance we just accessed is no longer accessable because we have changed the rules.
+
+![](./img/Pasted%20image%20(23).png)
 
 
