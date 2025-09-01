@@ -135,5 +135,25 @@ Navigate to VPC via search and click vpc.
 
 ![](./img/Pasted%20image%20(23).png)
 
-* We are still unable to access the app.
+* We are still unable to access the app. The reason is despite permitting inbound traffic, we need to explicitly configure rules for both inbound and outbound because NACL is stateless. Though inbound rules permits traffic, outbound rules denies still as seen below.
+
+![](./img/Pasted%20image%20(24).png)
+
+![](./img/Pasted%20image%20(25).png)
+
+* Select the NACL, click the outbound tab and click "Edit outbound rules" 
+
+![](./img/Pasted%20image%20(25).png)
+
+* Click 'Add rule', add a number, select traffic type, destination info, set Allow/Deny and click save as we did during the inbound rule setup.
+
+![](./img/Pasted%20image%20(26).png)
+
+* A success page indicating outbound rules updates popsup. You can also confirm by clicking the outbound ruless tab.
+
+![](./img/Pasted%20image%20(28).png)
+
+* Now go back to your browser to check if access is now granted. Now we can access the text.
+
+![](./img/Pasted%20image%20(30).png)
 
